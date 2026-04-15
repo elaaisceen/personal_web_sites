@@ -387,7 +387,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="login.php?do=kullanicilar" class="nav-link">
+                    <a href="login.php?do=onsayfaislemleri" class="nav-link">
                       <i class="bi bi-clipboard-check"></i>
                       <p>Ön Sayfa İşlemleri</p>
                     </a>

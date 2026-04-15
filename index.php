@@ -492,52 +492,24 @@ body {
       </div>
     </div>
 
+    
+    <?php $getirYetkinlikler=$code->GetirYetkinlikBilgileri(); ?>
     <!-- Yetkinlikler -->
     <div class="col-md-3">
 
+        <?php foreach ($getirYetkinlikler as $ySatir): ?>
 
       <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label ><?php echo $htmlbaslik;?></label>
+        <label ><?php echo $ySatir->yetenek_adi; ?></label>
         <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $html.'%'?>"><?php echo $html;?></div>
+          <div class="progress-bar bg-pink" style="width: 0%;" aria-valuenow=" <?php echo $ySatir->yetenek_duzey; ?>
+          "aria-valuemin="0" aria-valuemax="100"data-target-width= "<?php echo $ySatir->yetenek_duzey . "%"; ?>">
+            <?php echo $ySatir->yetenek_duzey . "%"; ?>
+        </div>
         </div>
       </div>
-
-      <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label ><?php echo $cssbaslik;?></label>
-        <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $css.'%'?>"><?php echo $css;?></div>
-        </div>
-      </div>
-
-      <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label ><?php echo $javascriptbaslik;?></label>
-        <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $javascript.'%'?>"><?php echo $javascript;?></div>
-        </div>
-      </div>
-
-
-      <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label ><?php echo $bootstrapbaslik;?></label>
-        <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $bootstrap.'%'?>"><?php echo $bootstrap;?></div>
-        </div>
-      </div>
-
-
-      <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label ><?php echo $tasarimbaslik;?></label>
-        <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $figma.'%'?>"><?php echo $figma;?></div>
-        </div>
-      </div>
-      <div class="mb-4" data-aos="fade-down-right" data-aos-delay="500">
-        <label >Ortalama Beceri Skorum</label>
-        <div class="progress" role="progressbar">
-          <div class="progress-bar bg-pink"   style="width: 0%;" data-target-width="<?php echo $ortalama.'%'?>"><?php echo $ortalama;?></div>
-        </div>
-      </div>
+      <?php endforeach; ?>
+      
     </div>
   </div>
 </div>
