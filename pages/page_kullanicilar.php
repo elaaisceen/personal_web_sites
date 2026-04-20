@@ -5,10 +5,10 @@ if($rutbe != 7){
 ?>
 <div class="alert alert-danger">Yetkisiz işlem! Log kayıtlarınız yöneticiye bildirilmiştir.</div>
 <?php
-}
+
 go("login.php?do=anasayfa",3);
 exit;
-
+}
 ?>
 
 <div class="app-content-header">
