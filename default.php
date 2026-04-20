@@ -345,7 +345,7 @@
                 <ul class="nav nav-treeview">
 				
 				   <li class="nav-item">
-                    <a href="./index2.html" class="nav-link">
+                    <a href="../kullanici/yenikayit.php" class="nav-link">
                       <i class="nav-icon bi bi-person-plus"></i>
                       <p>Yeni Kullanıcı Ekle</p>
                     </a>
